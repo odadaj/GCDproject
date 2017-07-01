@@ -1,8 +1,7 @@
 ## GCDproject
 ### Getting and Cleaning Data Course Project
 The purpose of this project is to demonstrate ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. 
-The script is used to transform the data downloaded from [here]
-(https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+The script is used to transform the data downloaded from [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) A full description is available at the site where the data was obtained [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) 
 
 #### Data set information
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
@@ -22,6 +21,7 @@ For each record provided:
 **destfile is the name which the downloaded zip file will be saved as.
 
 2. The loadncombine function is used to read the files as data table. Function option used to determine whether test or training data
+<<<<<<< HEAD
 The following files are read and combined to form a single table
 **X_train.txt
 **y_train.txt
@@ -29,6 +29,14 @@ The following files are read and combined to form a single table
 **X_test.txt
 **y_test.txt
 **subject_test.txt
+=======
+The following files are read and combined to form a single table.  
+x_train.txt  
+y_train.txt  
+subject_train.txt  
+x_test.txt  
+y_test.txt  
+subject_test.txt  
 
 The following variables are defined in this step:
 
@@ -55,15 +63,3 @@ The following variables are defined in this step:
 
 7.  A new tidy data set with the average of each variable for each activity and each subject is extracted and saved as tidydata.txt
 **tidydata data set of mean of each activity grouped by userid and activity.
-
-
-
-
-
-
-
-
-
-
-
-
