@@ -7,3 +7,6 @@ This repository contains the script run_analysis.R that downloads data from [Hum
 4. Appropriately labels the data set with descriptive variable names
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each   activity and each subject.  
 #### This script requires the dplyr and the data.table packages.
+### Additional Information
+Additional information can be found in the CodeBook.MD file.
+
