@@ -19,13 +19,13 @@ For each record provided:
 1. The unzipnload function is used to download, extract and load the files into the R environment.
 
 2. The loadncombine function is used to read the files as data table. Function option used to determine whether test or training data
-The following files are read and combined to form a single table
-*x_train.txt
-*y_train.txt
-*subject_train.txt
-*x_test.txt
-*y_test.txt
-*subject_test.txt
+The following files are read and combined to form a single table.  
+x_train.txt  
+y_train.txt  
+subject_train.txt  
+x_test.txt  
+y_test.txt  
+subject_test.txt  
 
 3. The features.txt file is read and used to assign column names to the merged data set.
 
