@@ -52,4 +52,4 @@ colnames(alldata) <- alldatacols
 
 # Create a second, independent tidy data set with the average of each variable for each activity and each subject.
 tidydata <- alldata %>% group_by(userid, activity) %>% summarise_each(funs(mean))
-fwrite(tidydata, file = "tidydata.txt", row.names = T)
+fwrite(tidydata, file = "tidydata.txt", row.names = F)

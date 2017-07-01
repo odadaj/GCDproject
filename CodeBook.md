@@ -17,24 +17,53 @@ For each record provided:
 5. An identifier of the subject who carried out the experiment.
 
 ### Steps. 
-1. The unzipnload function is used to download, extract and load the files into the R environment.
+1. The unzipnload function is used to download, extract and load the files into the R environment. 
+**zipurl points to the data set url 
+**destfile is the name which the downloaded zip file will be saved as.
 
 2. The loadncombine function is used to read the files as data table. Function option used to determine whether test or training data
 The following files are read and combined to form a single table
-**x_train.txt
+**X_train.txt
 **y_train.txt
 **subject_train.txt
-**x_test.txt
+**X_test.txt
 **y_test.txt
 **subject_test.txt
 
+The following variables are defined in this step:
+
+**xfile used to set name for either X test or train files
+**yfile used to set name for either y test or train files
+**userfile used to set name for either subject test or train files
+**xdata table data set for X values of test or train file reads
+**ydata table data set for y values of test or train file reads
+**userdata table data set of subject values for test or train file reads
+**xtable combined table data set for either the test or train reads above
+**alldata The combined table data set for both test and train values
+
 3. The features.txt file is read and used to assign column names to the merged data set.
+**featurelist table dataset of reads from the features text file used as variable names
 
 4. Subset of data set is extracted to create new data set with mean and standard deviation values.
+**alldata table data sub set containing mean and standard deviation values
 
 5. activity_labels.txt is read and values used to merge with data set in order to provide a clearer description for each activity.
+**activitydata = table data set of activity file reads
 
 6. Special characters are removed from column names to make sure the variables are in a tidy format.
+**alldatacols data set of column names used to remove special characters
 
 7.  A new tidy data set with the average of each variable for each activity and each subject is extracted and saved as tidydata.txt
+**tidydata data set of mean of each activity grouped by userid and activity.
+
+
+
+
+
+
+
+
+
+
+
 
