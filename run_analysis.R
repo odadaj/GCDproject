@@ -8,7 +8,7 @@
 library(data.table)
 library(dplyr)
 
-#The unzipnload function is used to download, extract and load the files into the R environment.
+# The unzipnload function is used to download, extract the files.
 unzipnload <- function() {
   zipurl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
   destfile <- "dataset.zip"
@@ -33,9 +33,12 @@ loadncombine <- function(x) {
 unzipnload()
 traindata <- loadncombine("train") # Read and load training data
 testdata <- loadncombine("test") # Read and load test data
+
 alldata <- rbind(traindata, testdata) # The training and test data are merged row wise into an alldata object.
+
 featurelist <- read.table("dataset/features.txt") # Reads the features text file to extract variable names
 colnames(alldata) <- c("userid", "activityid", t(featurelist[2])) # Assign each column a variable name starting with Subject and Activity columns previously added
+
 alldata <- subset(alldata, select = grep("id|mean|std", names(alldata))) #New table containing mean and standard deviation values
 
 activitydata = fread('dataset/activity_labels.txt')
