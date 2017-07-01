@@ -18,18 +18,16 @@ For each record provided:
 
 ### Steps. 
 1. The unzipnload function is used to download, extract and load the files into the R environment. 
-**zipurl points to the data set url 
-**destfile is the name which the downloaded zip file will be saved as.
-
-2. The loadncombine function is used to read the files as data table. Function option used to determine whether test or training data
+  zipurl points to the data set url  
+  destfile is the name which the downloaded zip file will be saved as.
+2. The loadncombine function is used to read the files as data table. Function option used to determine whether test or training data  
 The following files are read and combined to form a single table
-**X_train.txt
-**y_train.txt
-**subject_train.txt
-**X_test.txt
-**y_test.txt
-**subject_test.txt
-
+  X_train.txt
+  y_train.txt
+  subject_train.txt
+  X_test.txt
+  y_test.txt
+  subject_test.txt
 The following variables are defined in this step:
 
 **xfile used to set name for either X test or train files
